@@ -6,16 +6,23 @@ Created on Mar 3, 2012
 
 Based on django-chronograph.
 
+Changes for Django 1.6
+@author: Anderson Santos (me@andersonsantos.info)
+
 '''
 
 __author__      = "Raul Garreta (raul@tryolabs.com)"
 
 
 from django.conf import settings
-from django.core.management import setup_environ
+import os
+try:
+	from django.core.management import setup_environ
+except ImportError:
+	setup_environ = os.environ.setdefault 
+
 from django.utils.importlib import import_module
 
-import os
 
 def get_manage_py():
     module = import_module(settings.SETTINGS_MODULE)

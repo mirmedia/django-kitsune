@@ -7,6 +7,9 @@ Created on Mar 3, 2012
 Admin interface.
 Based on django-chronograph.
 
+Changes for Django 1.6
+@author: Anderson Santos (me@andersonsantos.info)
+
 '''
 
 __author__      = "Raul Garreta (raul@tryolabs.com)"
@@ -19,7 +22,7 @@ import os.path
 from datetime import datetime
 
 from django import forms
-from django.conf.urls.defaults import patterns, url
+from django.conf.urls import patterns, url
 from django.contrib import admin
 from django.core.management import get_commands
 from django.core.urlresolvers import reverse, NoReverseMatch
